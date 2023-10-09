@@ -9,9 +9,9 @@
 int main(void)
 {
 	int i = '0';
-	int x = '0';
+	int x = '1';
 
-	while (i <= '9')
+	while (i < '9')
 	{
 		while (x <= '9')
 		{
@@ -31,8 +31,8 @@ int main(void)
 			}
 			x++;
 		}
-		x = '0';
+		x = '1';
 		i++;
 	}
-	return (0);
+return (0);
 }
