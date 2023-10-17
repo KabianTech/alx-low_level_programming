@@ -19,6 +19,7 @@ int main(void)
 	}
 
 	password[index] = target - sum;
+	password[15] = '\0';
 
 	printf("%s\n", password);
 
