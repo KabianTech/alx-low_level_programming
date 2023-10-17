@@ -7,43 +7,23 @@
  */
 int main(void)
 {
-	char password[84];
-	int index = 0, sum = 0, h1, h2;
+	char password[16];
+	int index, sum, target;
 
 	srand(time(0));
-	while (sum < 2772)
-	{
-		password[index] = 33 + rand() % 94;
+	target = 2772;
+
+	for (index = 0, sum = 0; index < 15; ++index)
+	{ 
+		password[index] = '!' + rand() % ('~' - '!' + 1);
 		sum += password[index];
 	}
-	password[index] = '\0';
+	
+	password[15] = '\0';
+	password[14] = target - sum + '!';
 
-	if (sum != 2772)
-	{
-		h1 = (sum - 2772) / 2;
-		h2 = (sum - 2772) / 2;
-		if ((sum - 2772) % 2 != 0)
-			h1++;
-		for (index = 0; password[index]; index++)
-		{
-			if (password[index] >= (33 + h1))
-			{
-				password[index] -= h1;
-				break;
-			}
-		}
-	}
-
-	for (index = 0; password[index]; index++)
-	{
-		if (password[index] >= (33 + h2))
-		{
-			password[index] -= h2;
-			break;
-		}
-	}
-
-	printf("%s", password);
+	printf("%s\n", password);
 
 	return (0);
 }
+
