@@ -5,7 +5,7 @@
  * intializes it with a specific char
  * @size: size of the array
  * @c: char to fill the array
- * Return: null if size is 0 
+ * Return: null if size is 0
  * pointer to the array
  */
 char *create_array(unsigned int size, char c)
@@ -21,7 +21,7 @@ char *create_array(unsigned int size, char c)
 	if (s == NULL)
 		return (NULL);
 
-	for (i = 0; i < size; i++) 
+	for (i = 0; i < size; i++)
 	{
 		s[i] = c;
 	}
