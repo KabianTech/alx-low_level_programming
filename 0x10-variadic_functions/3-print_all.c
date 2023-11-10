@@ -6,13 +6,11 @@
  */
 void print_all(const char * const format, ...)
 {
-	int i, j;
-
+	int i, j; /* decalre variables and va_arg datatype */
 	char *str;
 	va_list k;
 
-	va_start(k, format);
-
+	va_start(k, format); /* iitialize var arguments */
 	i = 0;
 	while (format != NULL && format[i] != '\0')
 	{
@@ -40,10 +38,10 @@ void print_all(const char * const format, ...)
 				j = 1;
 				break;
 		}
-		if (format[i + 1] != '\0' && j == 0)
+		if (format[i + 1] != '\0' && j == 0) /* if NOT NULL */
 			printf(", ");
-		i++;
+		i++; /* update step of iteration var */
 	}
 	printf("\n");
-	va_end(k);
+	va_end(k); /*end traversal */
 }
