@@ -25,14 +25,14 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	if (get_op_func(k) == NULL || k[1] != '\0')
 	{
 		printf("Error\n");
-                exit(99);
+		exit(99);
 	}
 
 	if ((*k == '/' && j == 0) ||
 			(*k == '%' && j == 0))
 	{
 		printf("Error\n");
-                exit(100);
+		exit(100);
 	}
 
 	printf("%d\n", get_op_func(k)(i, j));
