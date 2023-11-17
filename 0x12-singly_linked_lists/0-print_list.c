@@ -1,12 +1,7 @@
 #include "lists.h"
-/***
+/**
  * print_list - prints all the elements of a list_t list
- * @h: pointer to the beginning of the list
- *
- * Description: this function prints all the elements of a list_t
- * list
- * If a string is NULL, it prints [0] (nil)
- *
+ * @h: singly linked lists
  * Return: number of nodes
  */
 size_t print_list(const list_t *h)
